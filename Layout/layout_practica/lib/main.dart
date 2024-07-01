@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,18 +40,31 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(title),
       ),
       body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TitleSection(name: "Panecillo", location: "Quito, Ecuador"),
-            TitleSection(
-                name: "La entrada de la 8", location: "Guayaquil, Ecuador"),
-            TitleSection(
-                name: "Basilica del Voto Nacional", location: "Quito, Ecuador"),
-            TitleSection(
-                name: "Parque Nacional Cajas", location: "Azuay, Ecuador"),
-            TitleSection(name: "Chimborazo", location: "Chimborazo, Ecuador"),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Elemento 1
+              TitleSection(name: "Panecillo", location: "Quito, Ecuador"),
+              ButtonSection(),
+              // Elemento 2
+              TitleSection(
+                  name: "La entrada de la 8", location: "Guayaquil, Ecuador"),
+              ButtonSection(),
+              // Elemento 3
+              TitleSection(
+                  name: "Basilica del Voto Nacional",
+                  location: "Quito, Ecuador"),
+              ButtonSection(),
+              // Elemento 1
+              TitleSection(
+                  name: "Parque Nacional Cajas", location: "Azuay, Ecuador"),
+              ButtonSection(),
+              // Elemento 1
+              TitleSection(name: "Chimborazo", location: "Chimborazo, Ecuador"),
+              ButtonSection(),
+            ],
+          ),
         ),
       ),
     );
@@ -84,7 +98,7 @@ class TitleSection extends StatelessWidget {
             ],
           )),
           Icon(
-            Icons.exit_to_app,
+            Icons.favorite,
             color: Colors.red[500],
           ),
           const SizedBox(
@@ -97,3 +111,68 @@ class TitleSection extends StatelessWidget {
   }
 }
 
+class ButtonSection extends StatelessWidget {
+  const ButtonSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final Color color = Theme.of(context).primaryColor;
+    return SizedBox(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          ButtonWithText(
+            color: color,
+            icon: Icons.call,
+            label: 'CALL',
+          ),
+          ButtonWithText(
+            color: color,
+            icon: Icons.near_me,
+            label: 'ROUTE',
+          ),
+          ButtonWithText(
+            color: color,
+            icon: Icons.share,
+            label: 'SHARE',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ButtonWithText extends StatelessWidget {
+  const ButtonWithText({
+    super.key,
+    required this.color,
+    required this.icon,
+    required this.label,
+  });
+
+  final Color color;
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
