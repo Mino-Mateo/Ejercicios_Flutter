@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,22 +46,42 @@ class _MyHomePageState extends State<MyHomePage> {
               // Elemento 1
               TitleSection(name: "Panecillo", location: "Quito, Ecuador"),
               ButtonSection(),
+              TextSection(
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+              ),
               // Elemento 2
               TitleSection(
                   name: "La entrada de la 8", location: "Guayaquil, Ecuador"),
               ButtonSection(),
+              TextSection(
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+              ),
               // Elemento 3
               TitleSection(
                   name: "Basilica del Voto Nacional",
                   location: "Quito, Ecuador"),
               ButtonSection(),
-              // Elemento 1
+              TextSection(
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+              ),
+              // Elemento 4
               TitleSection(
                   name: "Parque Nacional Cajas", location: "Azuay, Ecuador"),
               ButtonSection(),
-              // Elemento 1
+              TextSection(
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+              ),
+              // Elemento 5
               TitleSection(name: "Chimborazo", location: "Chimborazo, Ecuador"),
               ButtonSection(),
+              TextSection(
+                description:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+              ),
             ],
           ),
         ),
@@ -173,6 +192,26 @@ class ButtonWithText extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class TextSection extends StatelessWidget {
+  const TextSection({
+    super.key,
+    required this.description,
+  });
+
+  final String description;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(32),
+      child: Text(
+        description,
+        softWrap: true,
+      ),
     );
   }
 }
