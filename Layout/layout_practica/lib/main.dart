@@ -44,13 +44,16 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Elemento 1
+              ImageSection(image: "images/lake.jpeg"),
               TitleSection(name: "Panecillo", location: "Quito, Ecuador"),
               ButtonSection(),
               TextSection(
                 description:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
               ),
+
               // Elemento 2
+              ImageSection(image: "images/lake.jpeg"),
               TitleSection(
                   name: "La entrada de la 8", location: "Guayaquil, Ecuador"),
               ButtonSection(),
@@ -58,7 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 description:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
               ),
+
               // Elemento 3
+              ImageSection(image: "images/lake.jpeg"),
               TitleSection(
                   name: "Basilica del Voto Nacional",
                   location: "Quito, Ecuador"),
@@ -67,7 +72,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 description:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
               ),
+
               // Elemento 4
+              ImageSection(image: "images/lake.jpeg"),
               TitleSection(
                   name: "Parque Nacional Cajas", location: "Azuay, Ecuador"),
               ButtonSection(),
@@ -75,7 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 description:
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
               ),
+
               // Elemento 5
+              ImageSection(image: "images/lake.jpeg"),
               TitleSection(name: "Chimborazo", location: "Chimborazo, Ecuador"),
               ButtonSection(),
               TextSection(
@@ -212,6 +221,22 @@ class TextSection extends StatelessWidget {
         description,
         softWrap: true,
       ),
+    );
+  }
+}
+
+class ImageSection extends StatelessWidget {
+  const ImageSection({super.key, required this.image});
+
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      image,
+      width: 600,
+      height: 240,
+      fit: BoxFit.cover,
     );
   }
 }
