@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'pantalla1.dart';
+import 'package:new_app/view/firstPage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MainApp());
 }
 
-class MyApp extends StatelessWidget {
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Navegacion Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: FirstScreen(),
+    return const MaterialApp(
+      home: Scaffold(body: Firstpage()),
     );
   }
 }

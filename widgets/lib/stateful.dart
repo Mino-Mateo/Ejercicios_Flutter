@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
             style: TextStyle(color: Colors.black, fontSize: 30),
           ),
         ), // Container
-      ),  
-    );  
+      ),
+    );
   }
 }
