@@ -5,7 +5,7 @@ void main() => runApp(const MyApp());
 
 // StatefulWidget
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
 // ignore: library_private_types_in_public_api
@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 230, 255, 201),
+        backgroundColor: const Color.fromARGB(255, 230, 255, 201),
         appBar: AppBar(
           leading: const Icon(Icons.menu),
           backgroundColor: Colors.green,
