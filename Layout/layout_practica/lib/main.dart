@@ -44,53 +44,60 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // Elemento 1
-              ImageSection(image: "images/lake.jpeg"),
+              ImageSection(image: "images/Panecillo.jpeg"),
               TitleSection(name: "Panecillo", location: "Quito, Ecuador"),
               ButtonSection(),
               TextSection(
                 description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+                    "La Virgen del Panecillo es una escultura de aluminio que capta la atención desde casi cualquier parte de Quito, al estar ubicada en una de las zonas más altas de la ciudad"
+                    "Además, es un mirador natural y uno de los lugares preferidos de los quiteños así como recomendado para ser visitado por los turistas, durante los feriados o Fiestas de Quito."
+                    "La escultura representa a la Virgen María tal como se la describe en el libro bíblico del Apocalipsis. Es una mujer con alas, tiene una cadena que apresa a la serpiente que está bajo sus pies y que representa a la bestia."
+                    "Es por ello que además de los nombres de Virgen de Quito o Virgen de Legarda, esta estatua también es llamada Virgen del Apocalipsis,Virgen Alada de Quito o la Virgen Danzante.",
               ),
 
               // Elemento 2
-              ImageSection(image: "images/lake.jpeg"),
+              ImageSection(image: "images/Pailon-del-Diablo.jpeg"),
               TitleSection(
-                  name: "La entrada de la 8", location: "Guayaquil, Ecuador"),
+                  name: "Pailon del Diablo", location: "Tungurahua , Ecuador"),
               ButtonSection(),
               TextSection(
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
-              ),
+                  description:
+                      "Su nombre de el pailón del diablo nace por la forma que tiene las rocas que se encuentran bajo la cascada y si observas con detenimiento podrás ver la forma del rostro del diablo que se encuentra formado en las rocas, de ahí su nombre."
+                      "El pailón del diablo es un lugar turistico que llena de orgullo a los ecuatorianos.  "),
 
               // Elemento 3
-              ImageSection(image: "images/lake.jpeg"),
+              ImageSection(image: "images/Basilica.jpeg"),
               TitleSection(
                   name: "Basilica del Voto Nacional",
                   location: "Quito, Ecuador"),
               ButtonSection(),
               TextSection(
                 description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
+                    "Esta cripta está formada por cincuenta tumbas de mármol francés para cuerpos y ciento cincuenta de ellas para cenizas, todas con lápidas que ostentan el escudo del Ecuador bañado en oro, es por esto que este lugar no puede ser visitado por los turistas si no solamente por familiares de los fallecidos."
+                    "En el convento y la Basílica se guardan más de cuatro mil obras de arte de varias épocas que todavía"
+                    "no han sido inventariadas. Las más conocidas son los cuadros del Sagrado Corazón de Jesús, del pintor Rafael Salas"
+                    "y los anónimos de Santa Mariana de Jesús, Felipe Neri y San Francisco de Sales, comisionadas por el presidente Gabriel García Moreno para celebrar la consagración del Ecuador al corazón de Jesús.",
               ),
 
               // Elemento 4
-              ImageSection(image: "images/lake.jpeg"),
+              ImageSection(image: "images/Parque-nacional-Cajas.jpeg"),
               TitleSection(
                   name: "Parque Nacional Cajas", location: "Azuay, Ecuador"),
               ButtonSection(),
               TextSection(
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
-              ),
+                  description:
+                      "El Parque Nacional Cajas está ubicado en la provincia de Azuay, en el sur del Ecuador, donde la cordillera de los Andes es más antigua, con menor actividad volcánica y sin los picos elevados que son tan comunes más al norte."
+                      "En esta zona, la cordillera forma extensas altiplanicies de gran belleza donde se acumula agua en grandes cantidades."),
 
               // Elemento 5
-              ImageSection(image: "images/lake.jpeg"),
+              ImageSection(image: "images/Chimborazo.jpeg"),
               TitleSection(name: "Chimborazo", location: "Chimborazo, Ecuador"),
               ButtonSection(),
               TextSection(
-                description:
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus sed ex pellentesque luctus. Nulla in egestas urna. Quisque sodales, ligula a fermentum semper, eros justo tincidunt libero, a tristique tellus elit ac lacus. Curabitur iaculis, urna in sagittis ultricies, justo sapien volutpat mauris, nec rutrum ante nisl ac est. Suspendisse pretium, quam id elementum facilisis, augue erat suscipit magna, ut sodales sapien dui ut arcu. Vestibulum eu accumsan nulla. Duis sagittis neque ut ligula rutrum posuere. Mauris purus ex, eleifend et massa ut, gravida condimentum tellus. Donec scelerisque nec nunc mattis vulputate. Sed justo lectus, sagittis vitae dictum in, maximus et felis. Fusce vitae condimentum sem, fringilla iaculis mi. Quisque molestie quam felis, posuere euismod sapien auctor sed. Curabitur feugiat volutpat leo id rutrum.",
-              ),
+                  description:
+                      "El Chimborazo es un estratovolcán potencialmente activo, situado en el centro de Ecuador, en la Provincia de Chimborazo."
+                      "Perteneciente a la cordillera de los Andes, específicamente a los Andes septentrionales, cuenta con una altitud de 6263,47 m s. n. m."
+                      "por lo que es la montaña más alta del Ecuador y de los Andes septentrionales."),
             ],
           ),
         ),

@@ -41,63 +41,65 @@ Widget loginForm(BuildContext context) {
   final TextEditingController _mailcontroller = TextEditingController();
   final TextEditingController _passcontroller = TextEditingController();
 
-  const String email = "enner_valestresv@gmail.com";
-  const String password = "Duele99";
+  const String email = "a@a.com";
+  const String password = "a";
 
-  return Container(
-    child: Column(
-      children: [
-        Form(
-            key: _loginkey,
-            child: Column(
-              children: [
-                //Correo
-                TextFormField(
-                  controller: _mailcontroller,
-                  keyboardType: TextInputType.emailAddress,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Campo obligatorio";
-                    } else if (!value.contains("@")) {
-                      return "Formato de correo inválido";
-                    } else if (value != email) {
-                      return "Correo inválido";
-                    }
-                    return null;
-                  },
-                  decoration: const InputDecoration(
-                    labelText: "Correo",
-                  ),
+  return Column(
+    children: [
+      Form(
+          key: _loginkey,
+          child: Column(
+            children: [
+              //Correo
+              TextFormField(
+                controller: _mailcontroller,
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Campo obligatorio";
+                  } else if (!value.contains("@")) {
+                    return "Formato de correo inválido";
+                  } else if (value != email) {
+                    return "Correo inválido";
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  labelText: "Correo",
                 ),
-                const SizedBox(
-                  height: 50,
-                ),
-                //Contraseña
-                TextFormField(
-                  controller: _passcontroller,
-                  decoration: const InputDecoration(labelText: "Contraseña"),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Campo obligatorio";
-                    } else if (value != password) {
-                      return "Clave inválida";
-                    }
-                    return null;
-                  },
-                ),
-              ],
-            )),
-        const SizedBox(
-          height: 50,
-        ),
-        ElevatedButton(
-            onPressed: (){
-              if (_loginkey.currentState!.validate()) {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Secondpage(data: "Bienvenido patojo!")));
-              }
-            },
-            child: const Text("Iniciar Sesión"))
-      ],
-    ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              //Contraseña
+              TextFormField(
+                controller: _passcontroller,
+                decoration: const InputDecoration(labelText: "Contraseña"),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Campo obligatorio";
+                  } else if (value != password) {
+                    return "Clave inválida";
+                  }
+                  return null;
+                },
+              ),
+            ],
+          )),
+      const SizedBox(
+        height: 50,
+      ),
+      ElevatedButton(
+          onPressed: () {
+            if (_loginkey.currentState!.validate()) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          const Secondpage(data: "Bienvenido patojo!")));
+            }
+          },
+          child: const Text("Iniciar Sesión"))
+    ],
   );
 }
