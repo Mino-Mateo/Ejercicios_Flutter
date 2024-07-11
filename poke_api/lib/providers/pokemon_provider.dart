@@ -6,16 +6,24 @@ class PokemonProvider with ChangeNotifier {
   final ApiService _apiService = ApiService();
   List<Pokemon> _pokemonList = [];
   bool _isLoading = false;
+  String _errorMessage = '';
 
   List<Pokemon> get pokemonList => _pokemonList;
   bool get isLoading => _isLoading;
+  String get errorMessage => _errorMessage;
 
   Future<void> fetchPokemon() async {
     _isLoading = true;
+    _errorMessage = '';
     notifyListeners();
 
-    _pokemonList = await _apiService.fetchPokemonList();
-    _isLoading = false;
-    notifyListeners();
+    try {
+      _pokemonList = await _apiService.fetchPokemonList();
+    } catch (e) {
+      _errorMessage = e.toString();
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
   }
 }

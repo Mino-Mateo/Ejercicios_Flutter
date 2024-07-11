@@ -39,11 +39,17 @@ class PokemonListScreen extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           }
 
+          if (provider.errorMessage.isNotEmpty) {
+            return Center(child: Text('Error: ${provider.errorMessage}'));
+          }
+
           return ListView.builder(
             itemCount: provider.pokemonList.length,
             itemBuilder: (context, index) {
               Pokemon pokemon = provider.pokemonList[index];
               return ListTile(
+                leading:
+                    Image.network(pokemon.imageUrl), // Aquí mostramos la imagen
                 title: Text(pokemon.name),
                 onTap: () {
                   // Puedes agregar una navegación a un detalle de Pokémon aquí
