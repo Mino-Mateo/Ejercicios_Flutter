@@ -49,7 +49,8 @@ class PokemonListScreen extends StatelessWidget {
               Pokemon pokemon = provider.pokemonList[index];
               return ListTile(
                 leading:
-                    Image.network(pokemon.imageUrl), // Aquí mostramos la imagen
+                    // Imagen del POkewmon
+                    Image.network(pokemon.imagePath),
                 title: Text(pokemon.name),
                 onTap: () {
                   // Puedes agregar una navegación a un detalle de Pokémon aquí

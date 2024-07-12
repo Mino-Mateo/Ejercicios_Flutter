@@ -7,7 +7,7 @@ class ApiService {
   final String baseUrl = "https://pokeapi.co/api/v2";
 
   Future<List<Pokemon>> fetchPokemonList() async {
-    final response = await http.get(Uri.parse('$baseUrl/pokemon?limit=25'));
+    final response = await http.get(Uri.parse('$baseUrl/pokemon?limit=151'));
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
